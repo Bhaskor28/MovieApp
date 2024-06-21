@@ -41,27 +41,66 @@ class _MovieHomeState extends State<MovieHome> {
            height: 8,
          ),
 
-         Column(
-           children: [
-           Text(
-               "Populer Movie",
-             style:TextStyle(color:Colors.white,fontSize: 20),
+         Expanded(
+           child: SingleChildScrollView(
+             child: Column(
+               children: [
+               Text(
+                   "Populer Movie",
+                 style:TextStyle(color:Colors.white,fontSize: 20),
+               ),
+
+
+                 SizedBox(
+                   height: 8,
+                 ),
+
+                 SizedBox(height: 200,
+                 child: Moviecategory(
+                   movieType: MovieType.populer,
+                   )
+                 ),
+
+
+                 Text(
+                   "Top Rated Movie",
+                   style:TextStyle(color:Colors.white,fontSize: 20),
+                 ),
+
+
+                 SizedBox(
+                   height: 8,
+                 ),
+
+                 SizedBox(height: 200,
+                     child: Moviecategory(
+                       movieType: MovieType.topRated,
+                     )
+                 ),
+
+
+                 Text(
+                   "Upcomming Movie",
+                   style:TextStyle(color:Colors.white,fontSize: 20),
+                 ),
+
+
+                 SizedBox(
+                   height: 8,
+                 ),
+
+                 SizedBox(height: 200,
+                     child: Moviecategory(
+                       movieType: MovieType.upcoming,
+                     )
+                 ),
+
+
+
+
+               ]
+             ),
            ),
-
-
-             SizedBox(
-               height: 8,
-             ),
-
-             SizedBox(height: 200,
-             child: Moviecategory(
-               movieType: MovieType.populer,
-               )
-             ),
-
-
-
-        ]
          ),
        ],
 
